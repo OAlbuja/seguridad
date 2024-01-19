@@ -1,0 +1,42 @@
+<!-- user.component.html -->
+
+<router-outlet></router-outlet>
+
+<!-- Título de la Lista de Usuarios -->
+<div class="card text-bg-info mb-3">
+  <div class="card-header">Usuarios</div>
+  <div class="card-body custom-card-body">
+    <h5 class="card-title">Listado de Usuarios</h5>
+
+    <!-- Botón para agregar un nuevo usuario -->
+    <div class="my-2 text-left">
+      <button class="btn btn-rounded btn-primary" type="button" routerLink="userCreateForm">
+        Crear Usuario
+      </button>
+    </div>
+
+    <!-- Crear una tabla para mostrar los usuarios -->
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Usar *ngFor para iterar sobre los usuarios y mostrarlos en la tabla -->
+        <tr *ngFor="let user of user">
+          <td>{{ user.id }}</td>
+          <td>{{ user.nombre }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

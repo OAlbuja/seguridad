@@ -1,0 +1,15 @@
+/* header.component.css */
+
+.navbar {
+  background-color: #add8e6; /* Cambia el color de fondo */
+}
+
+.navbar-collapse {
+  justify-content: center; /* Centra los elementos del navbar */
+}
+
+.user-avatar {
+  max-width: 100%;
+  max-height: 30px; /* Ajusta la altura máxima según tus preferencias */
+}
+

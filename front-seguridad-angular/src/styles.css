@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+main {
+  min-height: 100vh; /* Altura mínima para asegurarse de que siempre llene la ventana gráfica */
+}
+
+/* Esto es opcional, dependiendo si quieres que aplique a todos los router-outlets */
+router-outlet + * {
+  width: 100%; /* Asegúrate de que los componentes renderizados ocupen el espacio completo */
+}
+
+

@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "WebSecurityConfig",
+            "request": "launch",
+            "mainClass": "com.udla.spring.boot.backend.seguridad.apirest.security.WebSecurityConfig",
+            "projectName": "spring-boot-backend-seguridad-apirest"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootBackendSeguridadApirestApplication<spring-boot-backend-seguridad-apirest>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.udla.spring.boot.backend.seguridad.apirest.SpringBootBackendSeguridadApirestApplication",
+            "projectName": "spring-boot-backend-seguridad-apirest",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

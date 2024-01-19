@@ -1,0 +1,40 @@
+<!-- header.component.html -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <a class="navbar-brand" href="#">Software Seguro</a>
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" routerLink="/home" href="#">Home</a>
+        <!-- Agrega el elemento de menú desplegable aquí -->
+        <div *ngIf="authService.isLoggedIn()" class="navbar-nav">
+          <a class="nav-link" routerLink="/user" href="#">Usuarios</a>
+          <a class="nav-link" routerLink="/contacto" href="#">Contactos</a>
+          <!-- Dropdown que se muestra cuando el usuario está logueado -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="assets/images/perfildropdown.png" alt="Usuario" class="user-avatar">
+              Mi Cuenta
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <!-- Opciones del menú desplegable -->
+              <li><a class="dropdown-item" href="#">Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Configuración</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#" (click)="performLogout()">Cerrar Sesión</a></li>
+            </ul>
+          </li>
+        </div>
+        <div *ngIf="!authService.isLoggedIn()" class="navbar-nav">
+          <!-- Botón de inicio de sesión que se muestra cuando el usuario no está logueado -->
+          <button class="btn btn-primary" (click)="navigateToLogin()">Acceder</button>
+        </div>
+        <!-- Fin del elemento de menú desplegable -->
+      </div>
+    </div>
+  </div>
+</nav>
